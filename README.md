@@ -55,7 +55,7 @@ Steps:
 Add additional notes about how to deploy this on a live system
 
 1. Heroku Deployment
-   a. on heroku depolyment add file names (Procfile) - and Content (web node index.js)
+   a. on heroku depolyment , deploy complete folder.
    b. do not deploy node_modules folder , exclude it.
 
 
