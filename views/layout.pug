@@ -1,0 +1,33 @@
+doctype html
+html
+  head
+    title Learn Node Express
+    link(rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap.min.css")
+  body
+    .container
+      nav.navbar.navbar-expand-lg.navbar-light.bg-light
+        a.navbar-brand(href='/') Express App
+        button.navbar-toggler(type='button' data-toggle='collapse' data-target='#navbarNavAltMarkup' aria-controls='navbarNavAltMarkup' aria-expanded='false' aria-label='Toggle navigation')
+          span.navbar-toggler-icon
+        #navbarNavAltMarkup.collapse.navbar-collapse
+          .navbar-nav
+          if user
+            a.nav-item.nav-link(href='/article') Articles
+          if user
+            a.nav-item.nav-link(href='/article/add') Add Article
+          if user
+            .navbar-nav.navbar-right
+              a.nav-item.nav-link(href='/user/logout') Logout
+          else
+            .navbar-nav.navbar-right
+              a.nav-item.nav-link(href='/user/login') Login
+              a.nav-item.nav-link(href='/user/register') Register
+
+      block content
+      br
+      hr
+      footer
+          p copyright &copy; 2020
+    script(src='/bower_components/jquery/dist/jquery.min.js')
+    script(src='/bower_components/bootstrap/dist/js/bootstrap.min.js')
+    script(src='/js/main.js')

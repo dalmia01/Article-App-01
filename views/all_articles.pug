@@ -1,0 +1,13 @@
+extends layout
+
+block content
+  br
+  h2(style='text-align:center') Articles
+  br
+  ul.list-group
+  each article, i in articles
+    li.list-group-item
+      a(href='/article/'+article._id style='display:inline-block;min-width:450px;max-width:450px;') #{article.title}
+      span(style='margin-left:15%')
+        a.btn.btn-info(style='color:#fff;margin-right:10px' href='/article/edit/'+article._id) Edit
+        a.btn.btn-danger.remove-btn(style='display:inline-block;color:#fff;' href='#' data-id=article._id) Remove

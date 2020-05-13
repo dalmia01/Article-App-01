@@ -1,0 +1,21 @@
+extends layout
+
+block content
+  div(style="width:500px;margin:20px auto")
+    form(method='POST' action='/user/register')
+      .form-group
+        label Name:
+        input.form-control(type='text',name='name') 
+      .form-group
+        label Username:
+        input.form-control(type='text',name='username') 
+      .form-group
+        label email:
+        input.form-control(type='text',name='email')
+      .form-group
+        label Password:
+        input.form-control(type='password',name='password')
+      .form-group
+        label Confirm Password:
+        input.form-control(type='password',name='confirm')
+      input.btn.btn-primary(type='submit',name='submit',value='Register')

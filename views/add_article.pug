@@ -1,0 +1,15 @@
+extends layout
+
+block content
+  div(style="width:500px;margin:20px auto")
+    form(method='POST' action='/article/add')
+      .form-group
+        label Title:
+        input.form-control(type='text',name='title') 
+      .form-group
+        label Author:
+        input.form-control(type='text',name='author') 
+      .form-group
+        label Content:
+        input.form-control(type='text',name='content') 
+      input.btn.btn-primary(type='submit',name='submit',value='Add')

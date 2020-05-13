@@ -1,0 +1,11 @@
+extends layout
+
+block content
+  br
+  article
+    h3 #{article.title}
+    p written by : 
+      b #{article.author}
+    br
+    blockquote
+      i #{article.content}
